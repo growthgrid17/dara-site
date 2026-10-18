@@ -4,85 +4,448 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>DARA | Seasonal style, edited</title>
-<meta name="description" content="DARA is a transparent AI-hosted fashion and lifestyle creator within Growth Grid: human-reviewed seasonal style discovery and shoppable looks for UK audiences.">
-<meta name="color-scheme" content="light dark">
+<meta name="description" content="DARA is a transparent AI-hosted fashion and lifestyle creator within Growth Grid: high-street to high-end looks chosen on demand, reviews and quality, for UK audiences.">
+<meta name="theme-color" content="#f6efe6" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#1c1210" media="(prefers-color-scheme: dark)">
 <link rel="canonical" href="https://dara.growthgridai.uk/">
-<meta property="og:title" content="DARA | Seasonal style, edited">
-<meta property="og:description" content="Transparent AI-hosted fashion and lifestyle creator. Human reviewed. Affiliate links always disclosed.">
+<meta property="og:site_name" content="DARA">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://dara.growthgridai.uk/">
+<meta property="og:title" content="DARA | Seasonal style, edited">
+<meta property="og:description" content="High-street to high-end looks, chosen on demand, reviews and quality. AI-hosted, human reviewed.">
+<meta property="og:image" content="https://dara.growthgridai.uk/img/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="DARA, an AI-hosted fashion and lifestyle creator. Seasonal style, edited.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="DARA | Seasonal style, edited">
+<meta name="twitter:description" content="High-street to high-end looks, chosen on demand, reviews and quality.">
+<meta name="twitter:image" content="https://dara.growthgridai.uk/img/og.jpg">
 <style>
-:root{--bg:#faf7f2;--card:#fff;--ink:#241c18;--mute:#6b5f57;--accent:#7a2e3a;--line:#e5ddd2;color-scheme:light dark}
-@media (prefers-color-scheme:dark){:root{--bg:#171210;--card:#211a18;--ink:#f2ebe3;--mute:#a89b90;--accent:#d98a97;--line:#33292a}}
+:root{
+  --bg:#f6efe6;--paper:#fbf7f1;--ink:#2b1a14;--cocoa:#4a2e24;--mute:#6b5a50;--wine:#6d1f2f;--rose:#b88a6a;--line:#e3d4c3;--tile:#ecdfd0;
+  --serif:"Iowan Old Style","Palatino Linotype",Palatino,"Book Antiqua",Georgia,serif;
+  --sans:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  --radius:16px;color-scheme:light dark;
+}
+@media (prefers-color-scheme:dark){
+  :root{--bg:#1c1210;--paper:#241714;--ink:#f4ebe0;--cocoa:#d9c3b0;--mute:#b7a496;--wine:#e39aa8;--rose:#c99a7a;--line:#3a2a25;--tile:#2d1e19}
+}
 *{box-sizing:border-box}
-html{-webkit-text-size-adjust:100%}
-body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.65 Georgia,'Times New Roman',serif}
-header,main,footer{max-width:700px;margin:0 auto;padding-left:16px;padding-right:16px}
-header{padding-top:44px}
-.brand{font-size:.85rem;letter-spacing:.22em;text-transform:uppercase;color:var(--mute);margin:0 0 6px}
-h1{font-size:clamp(2.4rem,9vw,3.4rem);letter-spacing:.06em;margin:0 0 6px;line-height:1.1}
-.tag{color:var(--mute);margin:0 0 8px;font-size:1.1rem}
-h2{font-size:1.1rem;margin:0 0 10px;color:var(--accent);letter-spacing:.02em}
-section{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:20px 18px;margin:18px 0}
-p,li{margin:0 0 10px}
-ul{padding-left:20px;margin:0}
-li:last-child,p:last-child{margin-bottom:0}
-a{color:var(--accent);text-underline-offset:3px}
-a:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:2px}
-.links{display:flex;flex-wrap:wrap;gap:10px;list-style:none;padding:0}
-.links li{margin:0}
-.links a{display:inline-block;padding:10px 16px;border:1px solid var(--accent);border-radius:999px;text-decoration:none}
-.contact{margin-top:12px}
-dl{margin:0}
-dt{font-weight:bold;margin-top:12px}
-dd{margin:2px 0 0;color:var(--mute)}
-footer{padding-top:8px;padding-bottom:56px;font-size:.88rem;color:var(--mute)}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.6 var(--sans)}
+img{display:block;max-width:100%;height:auto}
+a{color:var(--wine);text-underline-offset:3px}
+a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid var(--wine);outline-offset:3px;border-radius:4px}
+h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.1;margin:0}
+p{margin:0 0 12px}
+.wrap{width:min(1120px,100% - 32px);margin-inline:auto}
+.skip{position:absolute;left:-999px;top:8px;background:var(--ink);color:var(--bg);padding:8px 14px;border-radius:8px;z-index:20}
+.skip:focus{left:8px}
+.kicker{font:600 .72rem/1 var(--sans);letter-spacing:.22em;text-transform:uppercase;color:var(--wine);margin:0 0 14px}
+.h2{font-size:clamp(1.9rem,5.5vw,3rem);letter-spacing:-.01em}
+.lede{color:var(--mute);font-size:1.05rem;max-width:56ch}
+section{padding:72px 0}
+.btn{display:inline-block;padding:14px 26px;border-radius:999px;font:600 .95rem/1 var(--sans);letter-spacing:.04em;text-decoration:none;border:1.5px solid var(--ink);color:var(--ink);transition:background .2s,color .2s,transform .2s}
+.btn:hover{background:var(--ink);color:var(--bg)}
+.btn--solid{background:var(--ink);color:var(--bg)}
+.btn--solid:hover{background:var(--wine);border-color:var(--wine);color:#fff}
+.btn[aria-disabled="true"]{opacity:.55;pointer-events:none}
+
+/* nav */
+.nav{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:60px}
+.logo{font:700 1.35rem/1 var(--serif);letter-spacing:.18em;color:var(--ink);text-decoration:none}
+.nav ul{display:none;list-style:none;gap:26px;margin:0;padding:0}
+.nav ul a{color:var(--ink);text-decoration:none;font-size:.9rem;letter-spacing:.04em}
+.nav ul a:hover{color:var(--wine)}
+.nav .btn{padding:10px 18px;font-size:.85rem}
+@media (min-width:860px){.nav ul{display:flex}}
+
+/* hero */
+.hero{padding:36px 0 56px;background:radial-gradient(1100px 520px at 85% 10%,color-mix(in srgb,var(--rose) 22%,transparent),transparent 70%)}
+.hero .wrap{display:grid;gap:28px;align-items:center}
+.hero__art{position:relative;order:-1;max-width:430px;margin-inline:auto;width:100%}
+.hero__art::before{content:"";position:absolute;inset:6% -4% -4% 8%;background:linear-gradient(160deg,var(--cocoa),var(--wine));border-radius:calc(var(--radius) + 14px);opacity:.9}
+.hero__art picture,.hero__art img{position:relative;border-radius:var(--radius)}
+.hero__art img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:50% 14%;box-shadow:0 24px 60px rgba(43,26,20,.28)}
+.tag{position:absolute;left:12px;bottom:12px;z-index:2;background:rgba(251,247,241,.92);color:#2b1a14;font:600 .68rem/1 var(--sans);letter-spacing:.14em;text-transform:uppercase;padding:8px 12px;border-radius:999px}
+.hero h1{font-size:clamp(4.2rem,17vw,8.5rem);letter-spacing:.06em;margin:0 0 8px}
+.hero__line{font:italic 500 clamp(1.4rem,4.4vw,2.1rem)/1.2 var(--serif);color:var(--wine);margin:0 0 18px}
+.hero p.lede{margin-bottom:26px}
+.hero__cta{display:flex;flex-wrap:wrap;gap:12px}
+@media (min-width:900px){
+  .hero{padding:56px 0 88px}
+  .hero .wrap{grid-template-columns:1.1fr .9fr;gap:56px}
+  .hero__art{order:0;max-width:none}
+}
+
+/* tiers */
+.tiers{padding:0 0 8px}
+.tiers__bar{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;background:var(--paper)}
+.tier{padding:18px 14px;text-align:center}
+.tier+.tier{border-left:1px solid var(--line)}
+.tier b{display:block;font:600 1rem/1.2 var(--serif)}
+.tier span{font-size:.8rem;color:var(--mute)}
+.tier:nth-child(1){background:linear-gradient(0deg,transparent,color-mix(in srgb,var(--rose) 10%,transparent))}
+.tier:nth-child(2){background:linear-gradient(0deg,transparent,color-mix(in srgb,var(--rose) 22%,transparent))}
+.tier:nth-child(3){background:linear-gradient(0deg,transparent,color-mix(in srgb,var(--wine) 22%,transparent))}
+.tiers__note{text-align:center;color:var(--mute);font-size:.92rem;margin:14px 0 0}
+
+/* the edit */
+.edit__grid{display:grid;gap:16px;margin-top:32px}
+.card{position:relative;overflow:hidden;border-radius:var(--radius);min-height:260px;display:flex;align-items:flex-end;color:#fbf3ea;isolation:isolate;transition:transform .35s ease,box-shadow .35s ease}
+.card:hover{transform:translateY(-4px);box-shadow:0 18px 40px rgba(43,26,20,.25)}
+.card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2;transition:transform .6s ease}
+.card:hover img{transform:scale(1.04)}
+.card .card__img--pos-low{object-position:50% 88%}
+.card::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(0deg,rgba(28,16,12,.78),rgba(28,16,12,.05) 62%)}
+.card__body{padding:22px}
+.card__n{font:600 .72rem/1 var(--sans);letter-spacing:.2em;opacity:.8;margin:0 0 8px}
+.card h3{font-size:1.65rem;margin:0 0 6px}
+.card p{margin:0;font-size:.93rem;opacity:.92;max-width:34ch}
+.card--choc{background:linear-gradient(135deg,#3a2018,#6d1f2f)}
+.card--choc::after{background:none}
+.card--suede{background:linear-gradient(145deg,#6a4a37,#2a1b14)}
+.card--suede::after{background:radial-gradient(120% 90% at 100% 0%,rgba(255,255,255,.12),transparent 55%)}
+.card--premium{background:linear-gradient(145deg,#ead8c4,#c49a7c);color:#2b1a14}
+.card--full{min-height:200px}
+.card--premium::after{background:none}
+@media (min-width:700px){.edit__grid{grid-template-columns:repeat(6,1fr)}.card{grid-column:span 3;min-height:320px}.card--wide{grid-column:span 4}.card--narrow{grid-column:span 2}.card--full{grid-column:1/-1;min-height:220px}}
+@media (min-width:1000px){.card{min-height:360px}}
+
+/* shop the look + picks + posts (render only when approved items exist) */
+.is-hidden{display:none}
+.looks{display:grid;gap:22px;margin-top:32px}
+.look{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:20px}
+.look__head{display:flex;justify-content:space-between;align-items:baseline;gap:12px;margin-bottom:16px}
+.look__head h3{font-size:1.5rem}
+.look__total{font:600 1rem/1 var(--serif);color:var(--wine)}
+.items{display:grid;gap:12px}
+@media (min-width:640px){.items{grid-template-columns:repeat(3,1fr)}}
+.item{display:flex;flex-direction:column;gap:8px}
+.item__img{aspect-ratio:3/4;border-radius:12px;background:var(--tile);display:grid;place-items:center;color:var(--mute);font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;overflow:hidden}
+.item__img img{width:100%;height:100%;object-fit:cover}
+.item__meta{font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:var(--mute)}
+.item__name{font:600 1rem/1.3 var(--serif);margin:0}
+.item__row{display:flex;justify-content:space-between;align-items:center;gap:10px}
+.item__price{font-weight:600}
+.item__proof{font-size:.8rem;color:var(--mute);margin:0}
+.item .btn{padding:10px 16px;font-size:.82rem;text-align:center}
+.disclose{font-size:.82rem;color:var(--mute);margin:16px 0 0}
+.ribbon{display:inline-block;background:var(--wine);color:#fff;font:600 .68rem/1 var(--sans);letter-spacing:.14em;text-transform:uppercase;padding:6px 10px;border-radius:999px;margin-bottom:14px}
+.picks{display:grid;gap:14px;margin-top:28px;grid-template-columns:repeat(2,1fr)}
+@media (min-width:860px){.picks{grid-template-columns:repeat(4,1fr)}}
+.pick{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:12px;display:flex;flex-direction:column;gap:8px}
+.pick .item__img{aspect-ratio:1/1}
+.tierpill{align-self:flex-start;font:600 .64rem/1 var(--sans);letter-spacing:.14em;text-transform:uppercase;padding:5px 8px;border-radius:999px;border:1px solid var(--rose);color:var(--cocoa)}
+.pick--luxury .tierpill{background:var(--wine);color:#fff;border-color:var(--wine)}
+.pick--premium .tierpill{background:var(--rose);color:#2b1a14;border-color:var(--rose)}
+
+/* how */
+.how{background:var(--paper);border-block:1px solid var(--line)}
+.how__grid{display:grid;gap:14px;margin-top:30px;grid-template-columns:1fr 1fr}
+@media (min-width:860px){.how__grid{grid-template-columns:repeat(5,1fr)}}
+.how__item{padding:18px;border-radius:14px;background:var(--bg);border:1px solid var(--line)}
+.how__item i{font:italic 600 1.7rem/1 var(--serif);color:var(--wine);display:block;margin-bottom:10px}
+.how__item h3{font-size:1.15rem;margin:0 0 6px}
+.how__item p{font-size:.9rem;color:var(--mute);margin:0}
+.how__item:last-child{grid-column:span 2}
+@media (min-width:860px){.how__item:last-child{grid-column:auto}}
+
+/* about */
+.about .wrap{display:grid;gap:30px;align-items:center}
+.about img{border-radius:var(--radius);width:100%;aspect-ratio:4/5;object-fit:cover;box-shadow:0 20px 50px rgba(43,26,20,.2)}
+@media (min-width:860px){.about .wrap{grid-template-columns:.85fr 1.15fr;gap:64px}}
+
+/* social */
+.social__grid{display:grid;gap:16px;margin-top:28px}
+@media (min-width:700px){.social__grid{grid-template-columns:1fr 1fr}}
+.soc{display:flex;flex-direction:column;justify-content:space-between;gap:28px;min-height:190px;padding:26px;border-radius:var(--radius);text-decoration:none;color:#fbf3ea;transition:transform .3s}
+.soc:hover{transform:translateY(-3px)}
+.soc small{font:600 .72rem/1 var(--sans);letter-spacing:.2em;text-transform:uppercase;opacity:.85}
+.soc b{font:600 1.7rem/1.1 var(--serif)}
+.soc span{font-size:.95rem}
+.soc--ig{background:linear-gradient(135deg,#6d1f2f,#b4533f)}
+.soc--tt{background:linear-gradient(135deg,#2b1a14,#4f3226)}
+.posts{display:grid;gap:12px;grid-template-columns:repeat(3,1fr);margin-top:22px}
+.post{aspect-ratio:9/16;border-radius:12px;background:var(--tile);display:grid;place-items:center;color:var(--mute);font-size:.75rem;letter-spacing:.14em;text-transform:uppercase}
+
+/* transparency */
+.trans{padding-top:24px}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin:0 0 16px;padding:0;list-style:none}
+.chips li{font:600 .78rem/1 var(--sans);letter-spacing:.1em;text-transform:uppercase;padding:10px 14px;border:1px solid var(--line);border-radius:999px;background:var(--paper)}
+details{border:1px solid var(--line);border-radius:var(--radius);background:var(--paper);padding:0 20px}
+summary{cursor:pointer;font:600 1.1rem/1.3 var(--serif);padding:18px 0;list-style:none;display:flex;justify-content:space-between;gap:12px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-size:1.4rem;line-height:1;color:var(--wine)}
+details[open] summary::after{content:"\2212"}
+details ul{margin:0 0 18px;padding-left:20px;color:var(--cocoa)}
+details li{margin-bottom:8px}
+
+/* footer */
+.foot{background:var(--ink);color:#f4ebe0;padding:56px 0 40px}
+.foot a{color:#f0cfc0}
+.foot__grid{display:grid;gap:28px}
+@media (min-width:760px){.foot__grid{grid-template-columns:1.3fr 1fr 1fr}}
+.foot h2{font:700 1.5rem/1 var(--serif);letter-spacing:.16em;margin:0 0 12px}
+.foot h3{font:600 .72rem/1 var(--sans);letter-spacing:.2em;text-transform:uppercase;margin:0 0 12px;opacity:.7}
+.foot ul{list-style:none;margin:0;padding:0}
+.foot li{margin-bottom:8px}
+.foot p{opacity:.85;font-size:.92rem}
+.foot__legal{border-top:1px solid rgba(244,235,224,.18);margin-top:32px;padding-top:20px;font-size:.82rem;opacity:.75}
+
+/* motion: only when JS runs */
+/* Reveal is movement-only: content is never faded or hidden, so full-page captures and slow scrollers always see it at full opacity. */
+.reveal{transition:transform .7s ease}
+.js .reveal.hide{transform:translateY(16px)}
+@media (prefers-reduced-motion:reduce){.reveal,.js .reveal.hide{transform:none;transition:none}.card,.card img,.soc,.btn{transition:none}}
 </style>
 </head>
 <body>
-<header>
-<p class="brand">A Growth Grid brand</p>
-<h1>DARA</h1>
-<p class="tag">Seasonal style, edited.</p>
-<p>An AI-hosted fashion and lifestyle creator making short, human-reviewed style discovery and shoppable looks for UK audiences.</p>
-</header>
-<main>
-<section aria-labelledby="h-what">
-<h2 id="h-what">What DARA does</h2>
-<p>Seasonal edits, complete looks and a simple "shop the look" breakdown: a top, trousers and a bag, each linked on its own, with the price of every piece and the whole look.</p>
-</section>
-<section aria-labelledby="h-how">
-<h2 id="h-how">How looks are chosen</h2>
+<a class="skip" href="#main">Skip to content</a>
+<header class="nav">
+<div class="wrap">
+<a class="logo" href="#top" aria-label="DARA home">DARA</a>
+<nav aria-label="Main">
 <ul>
-<li><strong>Demand:</strong> retailer best-seller and trending signals, and UK search interest.</li>
-<li><strong>Quality:</strong> review sentiment, sizing and returns feedback.</li>
-<li><strong>Trust:</strong> an item is only featured if followers would not feel misled by it, whatever it earns.</li>
+<li><a href="#edit">The Edit</a></li>
+<li class="is-hidden" id="nav-shop"><a href="#shop">Shop the look</a></li>
+<li><a href="#how">How DARA chooses</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#transparency">Transparency</a></li>
 </ul>
+</nav>
+<a class="btn btn--solid" href="https://www.instagram.com/daraverdict/">Follow</a>
+</div>
+</header>
+
+<main id="main">
+<div id="top"></div>
+<section class="hero" aria-labelledby="hero-title">
+<div class="wrap">
+<div class="hero__art">
+<picture>
+<source type="image/webp" srcset="img/dara-fullbody-640.webp 640w, img/dara-fullbody-1120.webp 1120w" sizes="(min-width:900px) 480px, 90vw">
+<img src="img/dara-fullbody-1120.jpg" srcset="img/dara-fullbody-640.jpg 640w, img/dara-fullbody-1120.jpg 1120w" sizes="(min-width:900px) 480px, 90vw" width="1122" height="1402" alt="DARA in a black top, dark overshirt and wide-leg olive trousers, standing in a neutral studio" fetchpriority="high">
+</picture>
+<span class="tag">AI-hosted character</span>
+</div>
+<div>
+<p class="kicker">Autumn / Winter 2026</p>
+<h1 id="hero-title">DARA</h1>
+<p class="hero__line">Seasonal style, edited.</p>
+<p class="lede">High-street to high-end looks selected using demand, reviews, quality and real shopping signals.</p>
+<div class="hero__cta">
+<a class="btn btn--solid" href="#edit">See the edit</a>
+<a class="btn" href="https://www.instagram.com/daraverdict/">@daraverdict</a>
+</div>
+</div>
+</div>
 </section>
-<section aria-labelledby="h-trans">
-<h2 id="h-trans">Transparency</h2>
-<p>DARA is an AI-hosted character, not a real person. All content is human reviewed. Looks are AI-styled visualisations and show similar picks, not necessarily the exact garments. DARA has not physically tested the products.</p>
-<p>Some links are affiliate links: if you buy through one, Growth Grid may earn a commission at no extra cost to you. Posts that include them are marked #ad.</p>
+
+<section class="tiers reveal" aria-label="Price tiers">
+<div class="wrap">
+<div class="tiers__bar">
+<div class="tier"><b>Accessible</b><span>Under £60</span></div>
+<div class="tier"><b>Premium</b><span>£60 to £500</span></div>
+<div class="tier"><b>Luxury</b><span>Over £500</span></div>
+</div>
+<p class="tiers__note">One standard across all three. Curation, not price bracket.</p>
+</div>
 </section>
-<section aria-labelledby="h-faq">
-<h2 id="h-faq">Questions</h2>
-<dl>
-<dt>Is DARA a real person?</dt><dd>No. DARA is an AI-hosted character, and says so.</dd>
-<dt>Does DARA test the clothes?</dt><dd>No. Picks are based on demand, reviews and quality evidence, not personal testing.</dd>
-<dt>Does it cost more through your links?</dt><dd>No. The price is the retailer's price.</dd>
-</dl>
+
+<section id="edit" class="edit" aria-labelledby="edit-title">
+<div class="wrap">
+<p class="kicker">The Edit</p>
+<h2 class="h2" id="edit-title">Five directions for the season</h2>
+<p class="lede">Style directions DARA is watching right now, from the palette to the silhouette.</p>
+<div class="edit__grid">
+<article class="card card--choc card--wide reveal">
+<div class="card__body"><p class="card__n">01</p><h3>Chocolate &amp; Burgundy</h3><p>Deep brown meets wine red. The colours of the season, worn together.</p></div>
+</article>
+<article class="card card--narrow reveal">
+<picture>
+<source type="image/webp" srcset="img/dara-fullbody-640.webp">
+<img src="img/dara-fullbody-640.jpg" width="640" height="800" loading="lazy" alt="" class="card__img card__img--pos-low">
+</picture>
+<div class="card__body"><p class="card__n">02</p><h3>Wide Leg</h3><p>Fluid, easy, endlessly wearable.</p></div>
+</article>
+<article class="card card--suede card--narrow reveal">
+<div class="card__body"><p class="card__n">03</p><h3>Suede &amp; Leather</h3><p>Texture that makes a simple look feel considered.</p></div>
+</article>
+<article class="card card--wide reveal">
+<picture>
+<source type="image/webp" srcset="img/dara-lifestyle-640.webp 640w, img/dara-lifestyle-1120.webp 1120w" sizes="(min-width:700px) 60vw, 100vw">
+<img src="img/dara-lifestyle-640.jpg" width="640" height="800" loading="lazy" alt="">
+</picture>
+<div class="card__body"><p class="card__n">04</p><h3>The Everyday Edit</h3><p>Soft knits and easy layers for ordinary days.</p></div>
+</article>
+<article class="card card--premium card--full reveal">
+<div class="card__body"><p class="card__n">05</p><h3>Premium Picks</h3><p>The pieces worth paying more for, and why.</p></div>
+</article>
+</div>
+</div>
 </section>
-<section aria-labelledby="h-find">
-<h2 id="h-find">Find DARA</h2>
-<ul class="links">
+
+<section id="shop" class="is-hidden" aria-labelledby="shop-title">
+<div class="wrap">
+<p class="kicker">Shop the look</p>
+<h2 class="h2" id="shop-title">Complete looks, piece by piece</h2>
+<p class="lede">Every piece linked on its own, with the price of the whole look.</p>
+<div class="looks" id="looks"></div>
+<p class="disclose">Affiliate links: Growth Grid may earn a commission at no extra cost to you. Posts that include them are marked #ad. AI-styled looks show similar styling, not necessarily the exact item.</p>
+</div>
+</section>
+
+<section id="picks" class="is-hidden" aria-labelledby="picks-title">
+<div class="wrap">
+<p class="kicker">DARA's picks</p>
+<h2 class="h2" id="picks-title">Accessible, premium and luxury, side by side</h2>
+<div class="picks" id="picks-grid"></div>
+<p class="disclose">Affiliate links: Growth Grid may earn a commission at no extra cost to you.</p>
+</div>
+</section>
+
+<section id="how" class="how" aria-labelledby="how-title">
+<div class="wrap">
+<p class="kicker">How DARA chooses</p>
+<h2 class="h2" id="how-title">Five questions every piece must answer</h2>
+<div class="how__grid">
+<div class="how__item reveal"><i>01</i><h3>Demand</h3><p>Are people really buying and searching for it?</p></div>
+<div class="how__item reveal"><i>02</i><h3>Reviews</h3><p>What does honest feedback say about fit and returns?</p></div>
+<div class="how__item reveal"><i>03</i><h3>Quality</h3><p>Fabric, finish and how it holds up.</p></div>
+<div class="how__item reveal"><i>04</i><h3>Value</h3><p>Worth it at its price, high street or high end.</p></div>
+<div class="how__item reveal"><i>05</i><h3>Style</h3><p>Does it work as part of one complete look?</p></div>
+</div>
+</div>
+</section>
+
+<section id="about" class="about" aria-labelledby="about-title">
+<div class="wrap">
+<picture>
+<source type="image/webp" srcset="img/dara-profile-640.webp 640w, img/dara-profile-1120.webp 1120w" sizes="(min-width:860px) 420px, 90vw">
+<img src="img/dara-profile-640.jpg" srcset="img/dara-profile-640.jpg 640w, img/dara-profile-1120.jpg 1120w" sizes="(min-width:860px) 420px, 90vw" width="1122" height="1402" loading="lazy" alt="Portrait of DARA in profile, long locs lit by warm light">
+</picture>
+<div class="reveal">
+<p class="kicker">About DARA</p>
+<h2 class="h2" id="about-title">A fashion eye, chosen on evidence</h2>
+<p class="lede">DARA is a transparent AI-hosted fashion and lifestyle creator, operated within Growth Grid.</p>
+<p>DARA finds what is worth wearing now, from the high street to high end, and builds it into complete looks you can actually shop. Every recommendation is weighed on demand, reviews, quality and value before it is shown.</p>
+</div>
+</div>
+</section>
+
+<section id="social" aria-labelledby="social-title">
+<div class="wrap">
+<p class="kicker">Follow DARA</p>
+<h2 class="h2" id="social-title">Looks, edits and new drops</h2>
+<div class="social__grid">
+<a class="soc soc--ig" href="https://www.instagram.com/daraverdict/"><small>Instagram</small><b>@daraverdict</b><span>Follow for the edit</span></a>
+<a class="soc soc--tt" href="https://www.tiktok.com/@daraverdict"><small>TikTok</small><b>@daraverdict</b><span>Short looks and style notes</span></a>
+</div>
+<div class="posts is-hidden" id="posts" role="group" aria-label="Recent DARA posts"></div>
+</div>
+</section>
+
+<section id="transparency" class="trans" aria-labelledby="trans-title">
+<div class="wrap">
+<h2 class="h2" id="trans-title">Transparency</h2>
+<ul class="chips">
+<li>AI-hosted character</li>
+<li>Human reviewed</li>
+<li>Affiliate links disclosed</li>
+</ul>
+<details>
+<summary>What we disclose</summary>
+<ul>
+<li>DARA is an AI-hosted character, not a real person.</li>
+<li>All content is human reviewed.</li>
+<li>DARA does not claim to wear or physically test products.</li>
+<li>AI-styled imagery shows similar styling and may not be the exact item unless stated.</li>
+<li>Some links are affiliate links. Growth Grid may earn a commission at no extra cost to you, and posts that include them are marked #ad.</li>
+</ul>
+</details>
+</div>
+</section>
+</main>
+
+<footer class="foot">
+<div class="wrap">
+<div class="foot__grid">
+<div>
+<h2>DARA</h2>
+<p>A Growth Grid content brand. Seasonal style, edited.</p>
+</div>
+<div>
+<h3>Partnerships</h3>
+<p>For partnership enquiries, message DARA on Instagram.</p>
+</div>
+<div>
+<h3>Follow</h3>
+<ul>
 <li><a href="https://www.instagram.com/daraverdict/">Instagram @daraverdict</a></li>
 <li><a href="https://www.tiktok.com/@daraverdict">TikTok @daraverdict</a></li>
 </ul>
-<p class="contact">For partnership enquiries, message DARA on Instagram.</p>
-</section>
-</main>
-<footer>
-<p>&copy; 2026 Growth Grid. DARA is a Growth Grid content brand.</p>
+</div>
+</div>
+<p class="foot__legal">Affiliate disclosure: some links on this site and in DARA's posts are affiliate links. Growth Grid may earn a commission at no extra cost to you. DARA is an AI-hosted character. &copy; 2026 Growth Grid.</p>
+</div>
 </footer>
+
+<script>
+(function(){
+  var d=document,root=d.documentElement;
+  root.classList.add('js');
+  /* Approved data goes here. Empty arrays keep these sections hidden on the live site. */
+  var LOOKS=[],PICKS=[],POSTS=[];
+  function el(t,c,x){var e=d.createElement(t);if(c)e.className=c;if(x!==undefined)e.textContent=x;return e}
+  function show(id){var n=d.getElementById(id);if(n)n.classList.remove('is-hidden')}
+  function btn(it){var a=el('a','btn btn--solid','Shop');if(it.url){a.href=it.url;a.rel='sponsored noopener'}else{a.setAttribute('aria-disabled','true');a.setAttribute('role','link')}return a}
+  function item(it){
+    var f=el('div','item'),im=el('div','item__img');
+    if(it.img){var i=el('img');i.src=it.img;i.alt=it.alt||it.name;im.appendChild(i)}else{im.textContent='Garment image'}
+    f.appendChild(im);f.appendChild(el('span','item__meta',it.retailer));f.appendChild(el('p','item__name',it.name));
+    var r=el('div','item__row');r.appendChild(el('span','item__price',it.price));r.appendChild(btn(it));f.appendChild(r);
+    if(it.proof)f.appendChild(el('p','item__proof',it.proof));return f
+  }
+  if(LOOKS.length){
+    var box=d.getElementById('looks');
+    LOOKS.forEach(function(l){
+      var c=el('article','look reveal');
+      var h=el('div','look__head');h.appendChild(el('h3','',l.title));h.appendChild(el('span','look__total','Whole look '+l.total));c.appendChild(h);
+      var g=el('div','items');l.items.forEach(function(it){g.appendChild(item(it))});c.appendChild(g);box.appendChild(c)
+    });
+    show('shop');show('nav-shop')
+  }
+  if(PICKS.length){
+    var pg=d.getElementById('picks-grid');
+    PICKS.forEach(function(p){
+      var c=el('article','pick pick--'+p.tier.toLowerCase()),im=el('div','item__img','Image');
+      c.appendChild(el('span','tierpill',p.tier));c.appendChild(im);c.appendChild(el('span','item__meta',p.retailer));c.appendChild(el('p','item__name',p.name));
+      var r=el('div','item__row');r.appendChild(el('span','item__price',p.price));r.appendChild(btn(p));c.appendChild(r);pg.appendChild(c)
+    });
+    show('picks')
+  }
+  if(POSTS.length){
+    var pb=d.getElementById('posts');
+    POSTS.forEach(function(){pb.appendChild(el('div','post','Recent post'))});
+    show('posts')
+  }
+  /* Reveal: content already on screen is never hidden; only items below the fold fade in as they scroll into view. */
+  var items=[].slice.call(d.querySelectorAll('.reveal'));
+  var reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if(!reduce&&'IntersectionObserver' in window){
+    var vh=window.innerHeight||d.documentElement.clientHeight;
+    var below=items.filter(function(n){return n.getBoundingClientRect().top>vh*0.9});
+    below.forEach(function(n){n.classList.add('hide')});
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.remove('hide');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px'});
+    below.forEach(function(n){io.observe(n)});
+    setTimeout(function(){below.forEach(function(n){n.classList.remove('hide')})},6000);
+  }
+  if(location.hash==='#transparency'){var dt=d.querySelector('details');if(dt)dt.open=true}
+})();
+</script>
 </body>
 </html>
